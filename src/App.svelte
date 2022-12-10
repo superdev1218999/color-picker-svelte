@@ -1,45 +1,37 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import Counter from './lib/Counter.svelte'
+  import ColorPicker from "./lib/ColorPicker.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
+  <div class="banner">
+    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
+      <img src="/svelte.svg" class="logo" alt="Svelte Logo" />
     </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+    <h1>ColorPicker</h1>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
+  <ColorPicker />
 </main>
 
 <style>
+  main {
+    max-width: 576px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px #ff3e00aa solid;
+    overflow-y: auto;
+    max-height: calc(100vh - 4rem);
+  }
   .logo {
     height: 6em;
-    padding: 1.5em;
     will-change: filter;
   }
   .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
     filter: drop-shadow(0 0 2em #ff3e00aa);
   }
-  .read-the-docs {
-    color: #888;
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 </style>
