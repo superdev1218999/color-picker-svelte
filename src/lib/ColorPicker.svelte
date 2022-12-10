@@ -28,8 +28,12 @@
   </div>
 
   <div class="color-list">
+    <p class="description">
+      Click color section or copy button to clipboard the color
+    </p>
     {#each colors as color, index}
       <div class="color-item">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div
           class="color-div"
           on:click={() => {
@@ -83,5 +87,15 @@
   #colorpicker {
     width: 100px;
     height: 100px;
+  }
+  .description {
+    text-align: center;
+    padding: 0.5rem;
+    widows: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 0;
+    background-color: #171825;
+    color: #ffffff;
   }
 </style>
